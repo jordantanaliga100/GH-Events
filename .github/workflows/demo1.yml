@@ -11,13 +11,15 @@ on:
   push:
     branches:
       - main # main
-      - "dev-*" # dev-new dev-new-this-is-new
-      - "feat/**" # feat/new feat/new/auth
-    # paths:
-    #   - "**.js"
-    #   - "**.jsx"
-    paths-ignore:
-      - .github/workflows/*
+      - "dev/*" # dev-new dev-new-this-is-new
+      - "feat/*" # feat/new feat/new/auth
+    paths:
+      - "**.js"
+      - "**.jsx"
+      - "package*.json"
+      - "!.github/workflows/*"
+    # paths-ignore:
+    #   - .github/workflows/*
 
 jobs:
   deploy:
